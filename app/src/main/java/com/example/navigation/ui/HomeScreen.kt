@@ -18,8 +18,8 @@ fun HomeScreen(navController: NavHostController) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Text(
             "Home",
-            modifier = Modifier.clickable{
-                navController.navigate(route = Screen.Details.route)
+            modifier = Modifier.clickable {
+                navController.navigate(route = Screen.Details.passArgs(id = 10))
             },
             color = MaterialTheme.colorScheme.primary,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,
@@ -27,8 +27,9 @@ fun HomeScreen(navController: NavHostController) {
         )
     }
 }
+
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview(){
+fun HomeScreenPreview() {
     HomeScreen(rememberNavController())
 }
