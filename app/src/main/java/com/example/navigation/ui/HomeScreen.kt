@@ -34,7 +34,7 @@ fun HomeScreen(navController: NavHostController) {
         Text(
             "Optional",
             modifier = Modifier.clickable {
-                navController.navigate(route = Screen.Optional.passId(0))
+                navController.navigate(route = Screen.Optional.passIdAndName(id = 0, name = "rodina"))
             },
             color = MaterialTheme.colorScheme.primary,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,

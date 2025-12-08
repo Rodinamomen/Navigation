@@ -9,7 +9,8 @@ sealed class Screen(val route: String) {
     }
 
     // Optional Arguments
-    object Optional : Screen(route = "optional_screen?id={id}") {
+    object Optional : Screen(route = "optional_screen?id={id}&name={name}") {
         fun passId(id: Int) = "optional_screen?id=$id"
+        fun passIdAndName(id: Int=0, name: String="") = "optional_screen?id=$id&name=$name"
     }
 }

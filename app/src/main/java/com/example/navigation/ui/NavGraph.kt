@@ -23,6 +23,9 @@ fun SetUpNavGraph(navController: NavHostController) {
         composable(route = Screen.Optional.route, arguments = listOf(navArgument("id") {
             NavType.IntType
             defaultValue = 1
+        }, navArgument("name") {
+            NavType.StringType
+            defaultValue = "name"
         })) {
             OptionalScreen(navController)
         }
