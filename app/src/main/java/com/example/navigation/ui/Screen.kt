@@ -5,6 +5,6 @@ sealed class Screen(val route: String) {
 
     // Single required Argument
     object Details : Screen(route = "details_screen/{id}/{name}") {
-        fun passArgs(id: Int) = "details_screen/$id"
+        fun passMultipleArgs(id: Int, name: String) = "details_screen/$id/$name"
     }
 }
