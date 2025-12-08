@@ -1,4 +1,4 @@
-package com.example.navigation.ui
+package com.example.navigation.ui.singlegraph
 
 sealed class Screen(val route: String) {
     object Home : Screen(route = "home_screen")

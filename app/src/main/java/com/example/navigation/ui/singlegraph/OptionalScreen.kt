@@ -1,4 +1,4 @@
-package com.example.navigation.ui
+package com.example.navigation.ui.singlegraph
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -14,14 +14,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
-/**
- * popBackStack() is used to pop a single destination from the top of the back stack, effectively navigating back one step. It mimics the behavior of the system back button.
- * popUpTo() is used to pop multiple destinations from the back stack until a specific destination is reached. It allows you to clear a portion of the back stack, rather than just the top element. */
 @Composable
-fun DetailsScreen(navController : NavHostController) {
+fun OptionalScreen(navController : NavHostController) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Text(
-            "Details",
+            "Optional",
             modifier = Modifier.clickable{
                 navController.popBackStack()
             },
@@ -33,6 +30,6 @@ fun DetailsScreen(navController : NavHostController) {
 }
 @Preview(showBackground = true)
 @Composable
-fun DetailsScreenPreview(){
-    DetailsScreen(rememberNavController())
+fun OptionalScreenPreview(){
+    OptionalScreen(rememberNavController())
 }
