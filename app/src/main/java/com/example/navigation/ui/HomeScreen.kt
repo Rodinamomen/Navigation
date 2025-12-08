@@ -1,7 +1,9 @@
 package com.example.navigation.ui
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -15,11 +17,24 @@ import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Text(
             "Home",
             modifier = Modifier.clickable {
                 navController.navigate(route = Screen.Details.passMultipleArgs(id = 10, name = "name"))
+            },
+            color = MaterialTheme.colorScheme.primary,
+            fontSize = MaterialTheme.typography.headlineLarge.fontSize,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            "Optional",
+            modifier = Modifier.clickable {
+                navController.navigate(route = Screen.Optional.passId(0))
             },
             color = MaterialTheme.colorScheme.primary,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,

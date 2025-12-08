@@ -15,10 +15,16 @@ fun SetUpNavGraph(navController: NavHostController) {
         }
         composable(route = Screen.Details.route, arguments = listOf(navArgument("id") {
             type = NavType.IntType
-        },navArgument("name") {
+        }, navArgument("name") {
             type = NavType.StringType
         })) {
             DetailsScreen(navController)
+        }
+        composable(route = Screen.Optional.route, arguments = listOf(navArgument("id") {
+            NavType.IntType
+            defaultValue = 1
+        })) {
+            OptionalScreen(navController)
         }
     }
 }
