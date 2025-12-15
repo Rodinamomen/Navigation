@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.navigation.ui.bottomnavigationbar.MainScreen
+import com.example.navigation.ui.bottomnavigationbar.SetUpBottomNavigationBar
 import com.example.navigation.ui.nestednavgraph.navigation.setUpNestedGraph
 import com.example.navigation.ui.singlegraph.SetUpNavGraph
 import com.example.navigation.ui.theme.NavigationTheme
@@ -18,7 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             NavigationTheme {
                 //   SetUpNavGraph(   navController = rememberNavController())
-                setUpNestedGraph(navController = rememberNavController())
+             //   setUpNestedGraph(navController = rememberNavController())
+                MainScreen()
             }
         }
     }
