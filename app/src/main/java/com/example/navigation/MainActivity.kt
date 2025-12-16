@@ -14,6 +14,7 @@ import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.component
 import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.BottomBarNavigation
 import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.SetupRootNestedNavGraph
 import com.example.navigation.ui.theme.NavigationTheme
+import com.example.navigation.ui.typesafenavigation.SetupNavGraph
 
 class MainActivity : ComponentActivity() {
     lateinit var navController: NavHostController
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 //   setUpNestedGraph(navController = rememberNavController())
                 // MainScreen()
                 navController = rememberNavController()
-                val navBackStackEntry by navController.currentBackStackEntryAsState()
+             /*   val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentDestination = navBackStackEntry?.destination
                 Scaffold(bottomBar = {
                     if (currentDestination?.hierarchy?.any() {
@@ -39,7 +40,8 @@ class MainActivity : ComponentActivity() {
                         BottomBar(navController = navController)
                 }) {
                     SetupRootNestedNavGraph(navController = navController)
-                }
+                }*/
+                SetupNavGraph(navController = navController)
             }
         }
     }
