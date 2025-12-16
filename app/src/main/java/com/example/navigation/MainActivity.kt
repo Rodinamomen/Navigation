@@ -13,6 +13,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.components.BottomBar
 import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.BottomBarNavigation
 import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.SetupRootNestedNavGraph
+import com.example.navigation.ui.navigation3.NavigationRoute
 import com.example.navigation.ui.theme.NavigationTheme
 import com.example.navigation.ui.typesafenavigation.SetupNavGraph
 
@@ -41,7 +42,11 @@ class MainActivity : ComponentActivity() {
                 }) {
                     SetupRootNestedNavGraph(navController = navController)
                 }*/
-                SetupNavGraph(navController = navController)
+           //     SetupNavGraph(navController = navController)
+               Scaffold() {  innerPadding ->
+                   NavigationRoute(innerPadding)
+               }
+
             }
         }
     }
