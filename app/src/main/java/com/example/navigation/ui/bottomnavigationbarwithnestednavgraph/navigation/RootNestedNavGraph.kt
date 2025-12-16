@@ -1,4 +1,4 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.navigation
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController

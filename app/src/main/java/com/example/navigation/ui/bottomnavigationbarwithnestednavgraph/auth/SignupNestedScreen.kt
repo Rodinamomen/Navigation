@@ -1,4 +1,4 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.auth
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.auth
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -14,38 +14,34 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.navigation.ui.bottombarwithnestednavigation.navigation.NestedScreen
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.NestedScreen
 
 @Composable
-fun LoginNestedScreen(navController: NavHostController) {
+fun SignupNestedScreen(navController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            "Login Screen",
-            modifier = Modifier.clickable{
-                // navigate to home nav graph
-                navController.navigate("home_nested")
-            },
+            "Signup Screen",
             color = Color.Red,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,
             fontWeight = FontWeight.ExtraBold
         )
         Text(
-            "Go to Signup",
-            modifier = Modifier.clickable{
-                // go to signup
-                navController.navigate(NestedScreen.SignupNestedScreen.route)
+            "go to login",
+            modifier = Modifier.clickable {
+                // go to login
+                navController.navigate(NestedScreen.LoginNestedScreen.route)
             },
             color = Color.Red,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,
             fontWeight = FontWeight.Bold
         )
         Text(
-            "Forget Password",
-            modifier = Modifier.clickable{
+            "forget password",
+            modifier = Modifier.clickable {
                 // go to forget password
                 navController.navigate(NestedScreen.ForgetNestedScreen.route)
             },
@@ -55,8 +51,9 @@ fun LoginNestedScreen(navController: NavHostController) {
         )
     }
 }
+
 @Preview(showBackground = true)
 @Composable
-private fun LoginNestedScreenPreview() {
-    LoginNestedScreen(rememberNavController())
+private fun SignupNestedScreenPreview() {
+    SignupNestedScreen(rememberNavController())
 }

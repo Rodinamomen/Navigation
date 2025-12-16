@@ -1,12 +1,12 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.navigation
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.example.navigation.ui.bottombarwithnestednavigation.auth.ForgetPasswordNestedScreen
-import com.example.navigation.ui.bottombarwithnestednavigation.auth.LoginNestedScreen
-import com.example.navigation.ui.bottombarwithnestednavigation.auth.SignupNestedScreen
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.auth.ForgetPasswordNestedScreen
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.auth.LoginNestedScreen
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.auth.SignupNestedScreen
 
 fun NavGraphBuilder.authNavGraph(navController: NavHostController) {
     navigation(route = "auth_nested", startDestination = NestedScreen.LoginNestedScreen.route) {

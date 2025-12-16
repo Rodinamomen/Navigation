@@ -1,4 +1,4 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.components
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.components
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.Icon
@@ -11,7 +11,7 @@ import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.navigation.ui.bottombarwithnestednavigation.navigation.BottomBarNavigation
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.BottomBarNavigation
 
 @Composable
 fun BottomBar(navController: NavHostController) {

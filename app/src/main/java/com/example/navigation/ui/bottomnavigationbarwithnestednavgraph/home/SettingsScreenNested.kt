@@ -1,4 +1,4 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.home
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -12,19 +12,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ProfileNestedScreen() {
+fun SettingsNestedScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.Red),
+            .background(color = Color.Cyan),
         contentAlignment = Alignment.Center
     ) {
-        Text("Profile", color = Color.White, fontSize = 24.sp)
+        Text("Settings", color = Color.White, fontSize = 24.sp)
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun ProfileNestedPreview() {
-    ProfileNestedScreen()
+private fun SettingsScreenPreview() {
+    SettingsNestedScreen()
 }

@@ -1,6 +1,5 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.details
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.details
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,31 +10,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
-import com.example.navigation.ui.bottombarwithnestednavigation.navigation.NestedScreen
 
 @Composable
-fun InformationNestedScreen(navController: NavHostController) {
+fun OverviewNestedScreen() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            "Information",
-            modifier = Modifier.clickable{
-                // go to Overview
-                navController.navigate(NestedScreen.OverviewNestedScreen.route)
-            },
+            "Overview",
             color = MaterialTheme.colorScheme.primary,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,
-            fontWeight = FontWeight.Bold)
+            fontWeight = FontWeight.Bold
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun InformationNestedPreview() {
-    InformationNestedScreen(rememberNavController())
+private fun OverviewNestedPreview() {
+    OverviewNestedScreen()
 }

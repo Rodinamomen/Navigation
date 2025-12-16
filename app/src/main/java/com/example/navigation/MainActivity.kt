@@ -10,10 +10,9 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.navigation.ui.bottombarwithnestednavigation.components.BottomBar
-import com.example.navigation.ui.bottombarwithnestednavigation.navigation.BottomBarNavigation
-import com.example.navigation.ui.bottombarwithnestednavigation.navigation.SetupRootNestedNavGraph
-import com.example.navigation.ui.bottomnavigationbar.MainScreen
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.components.BottomBar
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.BottomBarNavigation
+import com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation.SetupRootNestedNavGraph
 import com.example.navigation.ui.theme.NavigationTheme
 
 class MainActivity : ComponentActivity() {

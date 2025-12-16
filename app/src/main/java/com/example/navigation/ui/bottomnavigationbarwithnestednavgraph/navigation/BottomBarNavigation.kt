@@ -1,4 +1,4 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.navigation
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home

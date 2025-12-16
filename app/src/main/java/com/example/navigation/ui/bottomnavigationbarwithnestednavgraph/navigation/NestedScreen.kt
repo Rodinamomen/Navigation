@@ -1,4 +1,4 @@
-package com.example.navigation.ui.bottombarwithnestednavigation.navigation
+package com.example.navigation.ui.bottomnavigationbarwithnestednavgraph.navigation
 
 sealed class NestedScreen(val route: String) {
     object LoginNestedScreen : NestedScreen("login_nested_screen")
